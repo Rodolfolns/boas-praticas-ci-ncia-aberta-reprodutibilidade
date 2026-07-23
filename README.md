@@ -1,0 +1,22 @@
+# README
+Rodolfo Nascimento
+Invalid Date
+
+## Contexto
+
+Olá! Este projeto refere-se parte prática da disciplina de “Ciência
+Aberta e Reprodutibilidade Computacional em R Para Dados da
+Biodiversidade”. A disciplina é ministrada pelo Prof. Dr. Gabriel
+Nakmura Aprendendo (UFMG).
+
+## Onde eu encontro o material da disciplina?
+
+A apostila da disciplina pode ser encontrada aqui:
+<https://gabrielnakamura.github.io/USP_reproducibility_BIE5798/index.html>
+
+## Objetivo de hoje 23-07-2026:
+
+Hoje estamos aprendendo sobre Quarto e Rmarkdown, além de diversas
+coisas associadas. Estou apenas carregando dados e realizando uma
+inspeção rápida nele. O objetivo final é construir o projeto com
+“README” e upar para o repositório.
