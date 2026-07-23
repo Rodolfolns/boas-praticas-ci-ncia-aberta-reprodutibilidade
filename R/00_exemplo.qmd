@@ -1,0 +1,59 @@
+---
+title: "Exemplo de documento Quarto_Rodolfo"
+author: "Rodolfo Nascimento"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: 
+     html_document:
+       highlight: textmate
+       theme: flatly
+       number_sections: yes
+       toc: yes
+       toc_float:
+         collapsed: yes
+         smooth_scroll: yes
+---
+
+# 1. Objetivo:
+
+Aprendendo a usar o Quarto e RMarkdown. Disiciplina de Ciência Aberta e Reprodutibilidade do Prof. Dr. Gabriel Nakmura. A apostila da disciplina pode ser encontrada aqui <https://gabrielnakamura.github.io/USP_reproducibility_BIE5798/index.html>.
+
+# 2. Istalando e carregando os pacotes que vou usar
+
+## 2.1 Vamos usar uma função para instalar e carregar todos os pacotes de uma vez. u seja, mesmo que você ainda não tenha determinado pacote instalado na sua maquina, a função irá fazer isso para você. A função se chama `ipak`. Para adicionar ou remover pacotes apenas insira ou remova do objeto `packages` :)
+
+```{r carregamento de pacotes, message=FALSE, warning=FALSE}
+#| echo: true
+ipak <- function(pkg){
+  new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
+  if (length(new.pkg)) 
+    install.packages(new.pkg, dependencies = TRUE)
+  sapply(pkg, require, character.only = TRUE)
+}
+
+packages <- c("vegan","ggplot2", "readxl","knitr","kableExtra", "htmltools", "rmarkdown", "cowplot", "here")             
+ipak(packages)
+```
+
+# 3. Carregando, checando e estruturando os dados
+
+### Para o exercício irei utilizar um conjunto de dados de poliquetas em sedimento com e sem grama marinha
+
+## 3.1 Carregando
+
+```{r}
+load(here("data", "dados.RData"))
+```
+
+## 3.2 checking, and structuring
+
+Vamos carergar os dados direto da planilha execel
+
+```{r}
+paged_table(comm_abi)
+```
+
+## 3.3 Verificando a estrutura dos dados
+
+```{r estutura dos dados}
+str(comm_abi)
+```
